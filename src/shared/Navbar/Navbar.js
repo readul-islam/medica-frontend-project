@@ -24,7 +24,7 @@ const Navbar = () =>{
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  const theme = useTheme();
+  const muiTheme = useTheme();
 
   const handleProfileMenu = (data) => {
     console.log(data);
@@ -35,7 +35,7 @@ const Navbar = () =>{
 
   return (
     <>
-      <NavbarView colorMode={colorMode} theme={theme} handleProfileMenu={handleProfileMenu} seeProfile={seeProfile} setSeeProfile={setSeeProfile} />
+      <NavbarView colorMode={colorMode} muiTheme={muiTheme} handleProfileMenu={handleProfileMenu} seeProfile={seeProfile} setSeeProfile={setSeeProfile} />
     </>
   )    
 }

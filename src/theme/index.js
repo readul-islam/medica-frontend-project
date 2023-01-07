@@ -8,7 +8,7 @@ import { light } from "@mui/material/styles/createPalette";
 import { createContext, useMemo, useState } from "react";
 import { DarkPalette, LightPalette } from "./palette";
 
-export    const ColorModeContext = createContext({ toggleColorMode: () => {} });
+export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 export default function ThemeProvider({ children }) {
   const [mode, setMode] = useState("light");
   const colorMode = useMemo(
@@ -23,7 +23,7 @@ export default function ThemeProvider({ children }) {
     () => ({
       palette: {
         mode,
-        ...(mode === light ? { ...LightPalette } : { ...DarkPalette }),
+        ...(mode === light ? {} : {}),
       },
     }),
     [mode]

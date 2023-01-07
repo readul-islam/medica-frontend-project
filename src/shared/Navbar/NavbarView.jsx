@@ -37,9 +37,34 @@ const profile = [
   { id: 4, name: "Logout", icon: <LogoutIcon /> },
 ];
 
-function NavbarView({ colorMode,handleProfileMenu,setSeeProfile,seeProfile,theme}) {
+function NavbarView({ colorMode,handleProfileMenu,setSeeProfile,seeProfile,muiTheme}) {
+ 
+  let theme = localStorage.getItem("medica") || "light";
+  theme === "light" ? setLightTheme() : setDarkTheme();
+  function setDarkTheme() {
+    document.body.classList.add("dark");
+   
+    localStorage.setItem("medica", "dark");
+    theme = "dark";
+  }
+  function setLightTheme() {
+    document.body.classList.remove("dark");
+   
+    localStorage.setItem("medica", "light");
+    theme = "light";
+  }
+const handleMode =()=>{
+  if (theme === "light") {
+    setDarkTheme();
+  } else {
+    setLightTheme();
+   
+  }
+}
+// themeToggleButton.addEventListener("click", () => {
   
-
+// });
+  
   return (
 
  
@@ -91,11 +116,13 @@ function NavbarView({ colorMode,handleProfileMenu,setSeeProfile,seeProfile,theme
                       />
                     </IconButton>
                   </Tooltip>
+                  <span onClick={handleMode}>
                   <IconButton
+               
                     onClick={colorMode.toggleColorMode}
                     color="inherit"
                   >
-                    {theme.palette.mode === "dark" ? (
+                    {muiTheme.palette.mode === "dark" ? (
                       <Box sx={modeStyle.iconContainer}>
                         {" "}
                         <LightModeIcon sx={modeStyle.icon} />
@@ -113,7 +140,7 @@ function NavbarView({ colorMode,handleProfileMenu,setSeeProfile,seeProfile,theme
                       </Box>
                     )}
                   </IconButton>
-
+                  </span>
                   {/* card for profile */}
                   {seeProfile && (
                     <Paper

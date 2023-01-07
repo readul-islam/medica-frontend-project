@@ -18,6 +18,8 @@ export const menuStyle = { display: { xs: "none", md: "flex" } , gap:6};
 export const modeStyle = {
   icon: {
     fontSize: "30px",
+    // color:'#f0f556',
+    // fontWeight:'light'
   },
   iconContainer: {
     display: "flex",

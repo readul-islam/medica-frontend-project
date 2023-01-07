@@ -50,8 +50,8 @@ const Header = () => {
   const [index, setIndex] = useState(0);
   const transitions = useTransition(index, {
     from: { opacity: 0 },
-    enter: { opacity: 1, scale: 1 },
-    leave: { opacity: 0.5, scale: 0.4, duration:1 },
+    enter: { opacity: 1, scale: 1 ,filter: ' blur(10px);'},
+    leave: { opacity: 0.5,   },
     config: config.molasses,
   });
   useEffect(
