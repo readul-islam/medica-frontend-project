@@ -69,9 +69,9 @@ const handleMode =()=>{
 
  
       <>
-        <AppBar bg='red' elevation={0} sx={{ position: "sticky", top: 0, }}>
-          <Container maxWidth="lg">
-            <Toolbar disableGutters>
+        <AppBar bg='red' elevation={0} >
+          <Container sx={{ position: "sticky", top: 10, }}  maxWidth="lg">
+            <Toolbar  disableGutters>
               <Box sx={navbarContainerStyle}>
                 <IconButton
                   sx={mobileMenuIconStyle}
