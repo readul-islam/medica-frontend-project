@@ -44,7 +44,7 @@ function NavbarView({ colorMode,handleProfileMenu,setSeeProfile,seeProfile,theme
 
  
       <>
-        <AppBar sx={{ position: "sticky", top: 0 }}>
+        <AppBar bg='red' elevation={0} sx={{ position: "sticky", top: 0, }}>
           <Container maxWidth="lg">
             <Toolbar disableGutters>
               <Box sx={navbarContainerStyle}>

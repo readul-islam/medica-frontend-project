@@ -16,10 +16,11 @@ const HeaderView = ({ index, setIndex, transitions }) => {
           >
             <Typography
               sx={{
+                padding:{xs:1,md:0},
                 color: "#404D5F",
                 fontSize: { xs: 32, md: 48 },
                 position: "relative",
-                left: -306,
+                left: {xs:0,md:-306},
                 top: -100,
                 fontWeight: 900,
                 width: 550,
