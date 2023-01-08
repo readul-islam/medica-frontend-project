@@ -70,7 +70,7 @@ const handleMode =()=>{
  
       <>
         <AppBar bg='red' elevation={0} >
-          <Container sx={{ position: "sticky", top: 10, }}  maxWidth="lg">
+          <Container sx={{ position: "sticky", top: 10,paddingX:{lg:12.5} }}  maxWidth="">
             <Toolbar  disableGutters>
               <Box sx={navbarContainerStyle}>
                 <IconButton
